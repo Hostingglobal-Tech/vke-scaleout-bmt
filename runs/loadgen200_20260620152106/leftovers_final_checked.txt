@@ -1,0 +1,3 @@
+clusters:
+instances:
+8cd97817-5314-4af3-8e15-03b12e873715	ntopng-base-image	active	running	2	4096

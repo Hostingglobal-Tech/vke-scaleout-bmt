@@ -1,0 +1,33 @@
+run_id=loadgen200_20260620152106
+scenario=One Service URL, 200 loadgen pods, web pods scale 50 -> 200
+service_url=http://web-bmt.default.svc.cluster.local/
+provider=Vultr Kubernetes Engine
+region=icn
+plan=vc2-1c-2gb
+nodes=4
+
+== before metric ==
+sent=4305 http200=3695 http429=0 other=0 errors=610 success_rate=85.8% avg_ms=569.0 p95_ms=3000.0 p99_ms=3000.0
+
+== after metric ==
+sent=4175 http200=3825 http429=0 other=0 errors=350 success_rate=91.6% avg_ms=368.6 p95_ms=2473.1 p99_ms=3000.0
+
+== deployment ==
+NAME      READY     UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES         SELECTOR
+web-bmt   200/200   200          200         29m   nginx        nginx:alpine   app=web-bmt
+
+== web pod summary ==
+Terminating 50
+Running 200
+total 250
+
+== load jobs ==
+NAME           STATUS     COMPLETIONS   DURATION   AGE     CONTAINERS   IMAGES                   SELECTOR
+load-after2    Complete   200/200       3m27s      9m41s   curl         curlimages/curl:8.10.1   batch.kubernetes.io/controller-uid=caf3d1c8-0bbc-42aa-bb67-bbe18764817c
+load-before2   Complete   200/200       3m54s      16m     curl         curlimages/curl:8.10.1   batch.kubernetes.io/controller-uid=b7ebfd74-9308-4919-8855-117130d50e83
+
+== web pod distribution ==
+bmt-pool-378b8236dfbc 67
+bmt-pool-3d2c5b773b30 50
+bmt-pool-c49942c618f0 66
+bmt-pool-e1d5c542e703 67

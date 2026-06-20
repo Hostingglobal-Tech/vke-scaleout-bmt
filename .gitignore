@@ -20,3 +20,11 @@ tools/
 tmp/
 *.tmp
 *.bak
+
+# Public evidence bundle for README/demo.
+!media/
+!media/vke-scaleout-bmt-demo.mp4
+!media/vke-scaleout-bmt-demo.gif
+!runs/
+!runs/loadgen200_20260620152106/
+!runs/loadgen200_20260620152106/**

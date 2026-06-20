@@ -1,0 +1,22 @@
+[2026-06-20 15:21:11] run start label=vke-loadgen-loadgen200_20260620152106
+[2026-06-20 15:21:11] download kubectl
+[2026-06-20 15:21:19] create VKE cluster label=vke-loadgen-loadgen200_20260620152106 region=icn version=v1.36.1+1 plan=vc2-1c-2gb nodes=4
+[2026-06-20 15:21:26] created VKE cluster id=96a18182-c2b3-48cc-ab0d-7eb7708372c7
+[2026-06-20 15:21:27] cluster status=pending ready_nodes=0/4
+[2026-06-20 15:21:38] cluster status=pending ready_nodes=0/4
+[2026-06-20 15:21:52] cluster status=pending ready_nodes=3/4
+[2026-06-20 15:22:03] cluster status=pending ready_nodes=4/4
+[2026-06-20 15:22:14] cluster status=pending ready_nodes=4/4
+[2026-06-20 15:22:29] cluster status=pending ready_nodes=4/4
+[2026-06-20 15:22:39] cluster status=pending ready_nodes=4/4
+[2026-06-20 15:22:50] cluster status=pending ready_nodes=4/4
+[2026-06-20 15:23:05] cluster status=pending ready_nodes=4/4
+[2026-06-20 15:23:16] cluster status=pending ready_nodes=4/4
+[2026-06-20 15:23:26] cluster status=pending ready_nodes=4/4
+[2026-06-20 15:23:41] cluster status=pending ready_nodes=4/4
+[2026-06-20 15:23:52] cluster status=pending ready_nodes=4/4
+[2026-06-20 15:24:03] cluster status=pending ready_nodes=4/4
+[2026-06-20 15:24:17] cluster status=active ready_nodes=4/4
+[2026-06-20 15:24:59] kubectl ready nodes=4
+[2026-06-20 15:25:01] scale web to 50
+[2026-06-20 15:27:50] run 200 loadgen pods against 50 web pods

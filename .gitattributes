@@ -1,5 +1,10 @@
+/.gitattributes text eol=lf
 *.sh text eol=lf
 *.md text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf
 *.example text eol=lf
+*.txt text eol=lf
+*.log text eol=lf
+*.mp4 binary
+*.gif binary

@@ -1,0 +1,1 @@
+sent=4305 http200=3695 http429=0 other=0 errors=610 success_rate=85.8% avg_ms=569.0 p95_ms=3000.0 p99_ms=3000.0
